@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Code With Us</title>
+</head>
+
+<body>
+  {{> navbar data=details}}
+
+  {{>slider slides=slides}}
+  {{!-- banner --}}
+  <section class="banner1_section py-5 background1">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Start learning new technology here!!</h1>
+          <p>In today’s era of digitalization, technologies are indeed changing or updating like never before. Either we
+            talk about Programming Languages or their respective Frameworks or any other tools – technology in all
+            disciplines is emerging regularly. And, if you’re having a career in the tech world or looking forward to
+            getting into it then you need to know that you’re required to stay updated with all these latest tools and
+            technologies in your domain to be at the top of the game.</p>
+          <button class="btn btn-outline-primary">Start Learning</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  {{!-- services section --}}
+
+  <section id="services_section" class="py-3">
+    <div class="container">
+      <h1 class="text-center text-secondary">Services that we provide</h1>
+      <div class="row mt-5">
+        {{#each services}}
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body ">
+              <div class="container text-center py-3">
+                <i class="{{this.icon}}  service_icon text-secondary"></i>
+              </div>
+              <h3 class="card_title">{{this.title}}</h3>
+              <p>{{this.subtitle}}</p>
+              <a href="{{this.link}}">{{this.linkText}}</a>
+              <a href="" class="">Support</a>
+
+
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+
+  <section class="banner2_section">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6 text-center">
+         
+          <h3>We work for people , not for money</h3>
+          <p>Find the best programming services you need to help you successfully meet your project planning goals and
+            deadline</p>
+          <button class="btn btn-primary">Click Here</button>
+        </div>
+        <div class="col-md-6 text-center py-2">
+        
+          <img src="images/s8.jpg" style="height:250px ;" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="about_section">
+    <div class="container">
+      <div class="row py-5" >
+        <div class="col-md-12 text-center">
+          <h3 class="text-secondary">About Us</h3>
+          <p>From actionable meeting notes to inspiring project plans, kickstart team participation with a flexible
+            workspace , Save time by harnessing your teams' collective knowledge into easy-to-find answers for everyone
+            , Encourage all teams – from marketing to engineering – to share announcements, strengthen company culture,
+            and get instant feedback.
+
+          </p>
+          <button class="btn btn-outline-primary">Contact Us</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="contact_us_section_id" class="py-5 background1">
+    <div class="container">
+      <h1 class="text-center text-secondary">Contact Us</h1>
+      <div class="row">
+        <div class="col-md-12 ">
+          <form action="/process-contact-form" method="post">
+            <div class="container text-center">
+
+              <div class="mt-3 mb-3">
+                <label for="exampleInputEmail1" class="form-label">Your email address</label>
+                <input type="email" required name="email" class="form-control" id="exampleInputEmail1"
+                  aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+            </div>
+
+            <div class="container text-center mb-4">
+              <div class="mb-3 ">
+                <label for="contactnumberfield" class="form-label">Your contact number</label>
+                <input type="number" required name="phone" class="form-control" id="exampleInputPassword1">
+              </div>
+            </div>
+            <div class="container text-center mt-3">
+              <div class="form-floating mt-4 pt-3">
+                <textarea name="query" required style="height: 200px; color:black; width:100%" class="form-control"
+                  placeholder="Leave a comment here" id="Queryfield"></textarea>
+                <label for="Queryfield" style="color: black;">Your query</label>
+              </div>
+            </div>
+
+            <div class="container text-center mt-4">
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer class="footer ">
+<div class="container text-center py-2">
+  <div class="rows">
+    <div class="col-md-12">
+    <p> With <i class="fa-solid fa-heart"></i> By Muneeb</p>
+    
+    </div>
+  </div>
+</div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
